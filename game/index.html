@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emberlight Salvage</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #05060f;
+    color: #f4f1e6;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ffe9a8;
+  }
+  h1 span { color: #7ee7ff; }
+  canvas {
+    width: min(960px, 96vw);
+    height: auto;
+    aspect-ratio: 960 / 600;
+    border: 1px solid #3b2a6b;
+    border-radius: 10px;
+    background: #0b1026;
+    box-shadow: 0 0 42px rgba(126, 231, 255, 0.12), 0 0 90px rgba(255, 179, 71, 0.08);
+    touch-action: none;
+  }
+  p.controls {
+    margin: 0;
+    max-width: 960px;
+    text-align: center;
+    color: #b9b3c9;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  p.controls b { color: #f4f1e6; }
+</style>
+</head>
+<body>
+  <h1>Emberlight <span>Salvage</span></h1>
+  <canvas id="game" width="960" height="600" aria-label="Emberlight Salvage game canvas"></canvas>
+  <p class="controls">
+    <b>Goal:</b> bank 10 ember shards to open the warp gate and clear all 8 waves.
+    <b>Move:</b> WASD / arrows &nbsp;•&nbsp; <b>Aim:</b> mouse &nbsp;•&nbsp; <b>Fire:</b> click / Space
+    &nbsp;•&nbsp; <b>Pause:</b> P &nbsp;•&nbsp; <b>Restart:</b> R &nbsp;•&nbsp; <b>Sound:</b> M
+  </p>
+  <noscript>This game needs JavaScript to play.</noscript>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
